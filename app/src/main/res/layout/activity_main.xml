@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/MainWidget"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#466e9c">
+
+    <Chronometer
+            android:id="@+id/display"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:textColor="#fee0ff"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"/>
+
+
+
+    <Button
+            android:id="@+id/start_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display"
+            android:layout_alignParentLeft="true"
+            android:textSize="40dp"
+            android:layout_toLeftOf = "@id/center"
+            android:text="Start"
+            android:layout_alignParentStart="true"/>
+    <Button
+            android:id="@+id/pause_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/display"
+            android:layout_alignParentLeft="true"
+            android:textSize="40dp"
+            android:layout_toLeftOf = "@id/center"
+            android:text="Pause"
+            android:visibility="gone"/>
+    <Button
+            android:id="@+id/center"
+            android:layout_below="@id/display"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_centerHorizontal="true"/>
+    <Button
+            android:id="@+id/stop_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:layout_below="@id/display"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf = "@id/center"
+            android:text="Stop"/>
+    <TextView
+            android:id="@+id/info"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/stop_button"
+            android:textColor="#ff9494"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_alignParentBottom="true" android:layout_marginTop="-1dp" android:layout_marginBottom="0dp"/>
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_below="@id/start_button"
+                  android:gravity="center_horizontal"
+    >
+        <Button
+                android:id="@+id/nextTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:gravity="top"
+                android:text="Next Timer"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
